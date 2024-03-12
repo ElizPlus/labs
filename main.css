@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+    color: maroon;
+    font-family: Arial;
+    margin: 0px;
+}
+header {
+    background-color: floralwhite;
+    color: rgb(114, 59, 59);
+    font-family: Arial;
+}  
+
+footer {
+    background-color: sandybrown;
+    color: saddlebrown;
+    font-family: Arial;
+} 
+
+main {
+    background-color: sandybrown;
+    color: saddlebrown;
+    font-family: Arial;
+} 
