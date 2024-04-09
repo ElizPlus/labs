@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(177, 190, 194);
     color: maroon;
     font-family: Arial;
     margin: 0px;
@@ -11,13 +11,14 @@ header {
 }  
 
 footer {
-    background-color: sandybrown;
+    background-color: rgb(255, 180, 113);
     color: saddlebrown;
     font-family: Arial;
 } 
 
 main {
-    background-color: sandybrown;
+    background-color: rgb(255, 206, 166);
     color: saddlebrown;
     font-family: Arial;
+    text-indent: 25px; /* Отступ первой строки в пикселах*/
 } 
