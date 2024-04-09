@@ -31,7 +31,6 @@ a {
 
 a:link {
     color: brown;
-
 }
 
 a:visited {
@@ -48,4 +47,16 @@ a:hover {
 a:active {
     color: black;
     opacity: 0.3;
+}
+
+div.menu {
+    border: 6px solid #b84624;
+    border-radius: 7px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+div.menu:hover {
+    background-color: #f59477;
+    box-shadow: 0 0 30px #ffffff;
 }
