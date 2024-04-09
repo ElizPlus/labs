@@ -26,6 +26,7 @@ main {
 a {
     color: green;
     text-decoration: none;
+    transition: 1s 2s;
 }
 
 a:link {
@@ -40,7 +41,8 @@ a:visited {
 a:hover {
     color: red;
     text-decoration: underline;
-    text-shadow: 6px 4px 3px rgba(1, 7, 12, 0.685)
+    text-shadow: 6px 4px 3px rgba(1, 7, 12, 0.685);
+    transition: 0.3s;
 }
 
 a:active {
