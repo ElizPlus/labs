@@ -22,3 +22,28 @@ main {
     font-family: Arial;
     text-indent: 25px; /* Отступ первой строки в пикселах*/
 } 
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+a:link {
+    color: brown;
+
+}
+
+a:visited {
+    color:aliceblue;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    text-shadow: 6px 4px 3px rgba(1, 7, 12, 0.685)
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
+}
