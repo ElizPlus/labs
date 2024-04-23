@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        function korzCart() {
+            let input1 = document.getElementById('number1');
+            let input2 = document.getElementById('number2');
+            let input3 = document.getElementById('number3');
+            let input4 = document.getElementById('number4');
+            let input5 = document.getElementById('number5');
+            
+            let resultat = document.getElementById('resultat');
+            let a = 100;
+            let b = 123;
+            let c = 78;
+            let d = 50;
+            let e = 67
+            
+            let A = parseInt(input1.value);
+            let B = parseInt(input2.value);
+            let C = parseInt(input3.value);
+            let D = parseInt(input4.value);
+            let E = parseInt(input5.value);
+            let result = a*A + b*B + c*C + d*D + e*F;
+            resultat.innerHTML = 'Общая цена: ' + result + ' p';
+        }
+
+    </script>
+    <style>
+        .korzina{
+            width: 20%;
+            height: 30%;
+            background: linear-gradient(to right, black, rgb(79, 173, 142));
+            color: rgb(255, 255, 255);
+            border: 1px;
+            display: inline-block;
+            text-align: center;
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        
+        <div class = 'korzina'>
+            <h2>Корзина</h2>
+            <label>Манго (120р/шт): <br><input type="number" min="0" id="number1" placeholder="Введите количество"></label><br>
+            <label>Мандарины (123р/шт): <br><input type="number" min="0" id="number2" placeholder="Введите количество"></label><br>
+            <label>Апельсины (78р/шт): <br><input type="number" min="0" id="number3" placeholder="Введите количество"></label><br>
+            <label>Инжир (50р/шт): <br><input type="number" min="0" id="number4" placeholder="Введите количество"></label><br>
+            <label>Финики (67р/шт): <br><input type="number" min="0" id="number5" placeholder="Введите количество"></label><br>
+            <input type="button" value="Рассчитать" onclick="korzCart()">
+            <p id="resultat"></p>
+        </div>
+        <div id="output"></div>
+        
+    </main>
+
+    <footer>
+        &copy; Плюснина Елизавета, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
