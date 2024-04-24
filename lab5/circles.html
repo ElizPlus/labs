@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circles</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        function showKrug(num) {
+            let krug = document.getElementById(num);
+            krug.style.opacity = 0;
+        }
+        function restoreKrug() {
+            document.querySelectorAll('.krug').forEach(krug => {
+                krug.style.opacity = '1'; // Возвращаем прозрачность
+            });
+        }
+        
+
+    </script>
+    <style>
+        .krug {
+            margin-top: 28px;
+            margin-left: 5px;
+            width: 40px;
+            height: 30px;
+            text-align: center;
+            color: white;
+            border: 3px solid rgb(128, 139, 240);
+            border-radius: 60%;
+            padding-top: 5px;
+            display: inline-block;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            position: absolute;
+        }
+        button {
+            position: fixed;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <div class = 'krug' id="1" style="background-color: yellowgreen; top: 15%; left: 20%;" onclick="showKrug(1)">1</div>
+        <div class = 'krug' id="2" style="background-color: rgb(0, 255, 213); top: 20%; left: 70%;" onclick="showKrug(2)">2</div>
+        <div class = 'krug' id="3" style="background-color:burlywood; top: 10%; left: 20%;" onclick=showKrug(3)">3</div>
+        <div class = 'krug' id="4" style="background-color: black; top: 50%; left: 60%;" onclick="showKrug(4)">4</div>
+        <div class = 'krug' id="5" style="background-color: khaki; top: 30%; left: 35%;" onclick="showKrug(5)">5</div>
+        <div class = 'krug' id="6" style="background-color: darkmagenta; top: 40%; left: 20%;" onclick="showKrug(6)">6</div>
+        <div class = 'krug' id="7" style="background-color: hotpink; top: 55%; left: 40%;" onclick="showKrug(7)">7</div>
+        <div class = 'krug' id="8" style="background-color: darkcyan; top: 20%; left: 60%;" onclick="showKrug(8)">8</div>
+        <div class = 'krug' id="9" style="background-color: midnightblue; top: 50%; left: 40%;" onclick="showKrug(9)">9</div>
+        <div class = 'krug' id="10" style="background-color: rgb(145, 106, 29); top: 25%; left: 10%;" onclick="showKrug(10)">10</div>
+        <button onclick="restoreKrug()">Восстановить круги</button>
+        
+    </main>
+
+    <footer>
+        &copy; Плюснина Елизавета, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
