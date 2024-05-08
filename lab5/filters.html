@@ -19,6 +19,36 @@
             document.getElementById('brightnessOutput').innerText = value;
             document.getElementById('brightnessImage').style.filter = 'brightness(' + value + ')';
         }
+        function contrastChange() {
+            let value = document.getElementById('contrastValue').value + '%';
+            document.getElementById('contrastOutput').innerText = value;
+            document.getElementById('contrastImage').style.filter = 'contrast(' + value + ')';
+        }
+        function grayscaleChange() {
+            let value = document.getElementById('grayscaleValue').value + '%';
+            document.getElementById('grayscaleOutput').innerText = value;
+            document.getElementById('grayscaleImage').style.filter = 'grayscale(' + value + ')';
+        }
+        function hueRotateChange() {
+            let value = document.getElementById('hueRotateValue').value + 'deg';
+            document.getElementById('hueRotateOutput').innerText = value;
+            document.getElementById('hueRotateImage').style.filter = 'hue-rotate(' + value + ')';
+        }
+        function invertChange() {
+            let value = document.getElementById('invertValue').value + '%';
+            document.getElementById('invertOutput').innerText = value;
+            document.getElementById('invertImage').style.filter = 'invert(' + value + ')';
+        }
+        function saturateChange() {
+            let value = document.getElementById('saturateValue').value + '%';
+            document.getElementById('saturateOutput').innerText = value;
+            document.getElementById('saturateImage').style.filter = 'saturate(' + value + ')';
+        }
+        function sepiaChange() {
+            let value = document.getElementById('sepiaValue').value + '%';
+            document.getElementById('sepiaOutput').innerText = value;
+            document.getElementById('sepiaImage').style.filter = 'sepia(' + value + ')';
+        }
     </script>
     <style>
         
@@ -38,11 +68,54 @@
         </div>
         <div><img src="fonstola.ru_219958.jpg" id="blurImage"></div>
 
+        <div>   
         Фильтр brightness:
             <input type="range" min="0" max="500" value="100" onchange="brightnessChange()" id="brightnessValue">
             <span id="brightnessOutput"></span>
         </div>
-        <div><img src="fonstola.ru_219958.jpg" id="brightnessImage"></div>
+        <div><img src="maxresdefault.jpg" id="brightnessImage"></div>
+
+        <div>
+            Фильтр contrast:
+            <input type="range" min="0" max="500" value="100" onchange="contrastChange()" id="contrastValue">
+            <span id="contrastOutput"></span>
+        </div>
+        <div><img src="PojSOM3.jpg" id="contrastImage"></div>
+
+        <div>
+            Фильтр grayscale:
+            <input type="range" min="0" max="100" value="0" onchange="grayscaleChange()" id="grayscaleValue">
+            <span id="grayscaleOutput"></span>
+        </div>
+        <div><img src="fonstola.ru_219958.jpg" id="grayscaleImage"></div>
+
+        <div>
+            Фильтр hue-rotate:
+            <input type="range" min="0" max="360" value="0" onchange="hueRotateChange()" id="hueRotateValue">
+            <span id="hueRotateOutput"></span>
+        </div>
+        <div><img src="maxresdefault.jpg" id="hueRotateImage"></div>
+
+        <div>
+            Фильтр invert:
+            <input type="range" min="0" max="100" value="0" onchange="invertChange()" id="invertValue">
+            <span id="invertOutput"></span>
+        </div>
+        <div><img src="PojSOM3.jpg" id="invertImage"></div>
+
+        <div>
+            Фильтр invert:
+            <input type="range" min="0" max="500" value="100" onchange="saturateChange()" id="saturateValue">
+            <span id="saturateOutput"></span>
+        </div>
+        <div><img src="fonstola.ru_219958.jpg" id="saturateImage"></div>
+
+        <div>
+            Фильтр sepia:
+            <input type="range" min="0" max="100" value="0" onchange="sepiaChange()" id="sepiaValue">
+            <span id="sepiaOutput"></span>
+        </div>
+        <div><img src="maxresdefault.jpg" id="sepiaImage"></div>
     </main>
 
     <footer>
