@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>«Корзина товаров».</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        
+    </style>
+    <script>
+        function calculateTotal() {  // суммыа товаров и баланс
+                let balance = document.getElementById('balance').value;  // получили баланс пользователя
+                let total = 0; // сумма товаров
+                let errors = []; // массив для хранения ошибок
+        
+                for (let i = 1; i <= 7; i++) {   // перебор товаров
+                    let quantity = parseInt(document.getElementById('item' + i).value);   // количество выбранного товара                   
+                    if (!isNaN(quantity)) {   // Проверка значения на число                    
+                        if (quantity < 0) {   // Проверка неотрицательного значения 
+                            errors.push("Количество товара " + i + " не может быть отрицательным.");
+                        } else {                           
+                            let price;  
+                            switch (i) {
+                                case 1:
+                                    price = 70;
+                                    break;
+                                case 2:
+                                    price = 30;
+                                    break;
+                                case 3:
+                                    price = 100;
+                                    break;
+                                case 4:
+                                    price = 130;
+                                    break;
+                                case 5:
+                                    price = 15;
+                                    break;
+                                case 6:
+                                    price = 40;
+                                    break;
+                                case 7:
+                                    price = 85;
+                                    break;
+                            }                           
+                            total += quantity * price;  
+                        }
+                    }
+                }
+                       
+                if (total === 0) {  
+                    errors.push("Выберите хотя бы один товар.");
+                }
+        
+                
+                if (errors.length === 0) {  // Проверка: превышает ли сумма имеющийся баланс
+                    if (total > balance) {
+                        
+                        document.getElementById('result').innerHTML = "Общая сумма превышает имеющийся баланс.";  
+                    } else {
+                        
+                        document.getElementById('result').innerHTML = "Товар успешно оформлен. Общая сумма: " + total + " руб.";  
+                    }
+                } else {
+                    
+                    document.getElementById('result').innerHTML = errors.join("<br>");  
+                }
+            }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <h1>Корзина товаров</h1>
+        <label for="balance">Мой баланс:</label>
+            <input type="number" id="balance" min="0"><br><br>
+
+            <div id="cart">
+                <table>
+                    <tr>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                    </tr> 
+                    <tr>
+                        <td>Товар 1:</td>
+                        <td>70 руб.</td>
+                        <td><input type="number" id="item1" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Товар 2:</td>
+                        <td>30 руб.</td>
+                        <td><input type="number" id="item2" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Товар 3:</td>
+                        <td>100 руб.</td>
+                        <td><input type="number" id="item3" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Товар 4:</td>
+                        <td>130 руб.</td>
+                        <td><input type="number" id="item4" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Товар 5:</td>
+                        <td>15 руб.</td>
+                        <td><input type="number" id="item5" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Товар 6:</td>
+                        <td>40 руб.</td>
+                        <td><input type="number" id="item6" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Товар 7:</td>
+                        <td>85 руб.</td>
+                        <td><input type="number" id="item7" min="0"></td>
+                    </tr>
+                </table>
+            </div>
+            <br> 
+            <button onclick="calculateTotal()">ОК</button><br><br>
+            <div id="result"></div>
+    </main>
+
+    <footer>
+        &copy; Плюснина Елизавета, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
