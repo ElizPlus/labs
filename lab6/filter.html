@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плюснина Елизавета Евгеньевна. Лабораторная 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        .color {
+            display: flex;
+            flex-direction: column;
+            background-color: yellow;
+            border-radius: 5px;
+            border: 3px solid;
+            width: 170px;
+            padding: 20px;
+            left:20px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        } 
+    </style>
+    <script>
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if (color == 'Красный' && type == 'Футболка') {
+                wear.src = 'red1.jpg'
+            }
+            else if (color=='Белый' && type=='Футболка') {
+                wear.src = 'white1.jpg';
+            }
+            else if (color=='Черный' && type=='Футболка') {
+                wear.src = 'black1.jpg';
+            }
+            else if (color=='Красный' && type=='Поло') {
+                wear.src = 'red2.jpg';
+            }
+            else if (color=='Белый' && type=='Поло') {
+                wear.src = 'white2.jpg';
+            }
+            else if (color=='Черный' && type=='Поло') {
+                wear.src = 'black2.jpg';
+            }
+            else if (color=='Красный' && type=='Майка') {
+                wear.src = 'red3.jpg';
+            }
+            else if (color=='Белый' && type=='Майка') {
+                wear.src = 'white3.jpg';
+            }
+            else if (color=='Черный' && type=='Майка') {
+                wear.src = 'black3.jpg';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <div class="filter">
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Черный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">OK</button><br>
+
+            <img id="wear" style="width: 600px;">
+        </div>
+    </main>
+
+    <footer>
+        &copy; Плюснина Елизавета, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
