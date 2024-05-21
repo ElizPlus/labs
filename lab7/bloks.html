@@ -15,15 +15,15 @@
     </style>
     <script>
         function addNewBlock() { //обработчик нажатия
-            let newBlock = document.createElement('div');
+            let newBlock = document.createElement('div'); // создаёт новый элемент, в параметре имя тега
             newBlock.style.backgroundColor = 'green';
             newBlock.style.height = '40px';
             newBlock.style.border = '5px solid bisque'
             newBlock.style.margin = '5px'
             newBlock.style.width = '100px'
 
-            document.querySelector('main').appendChild(newBlock); //находит нужный тег
-        }
+            document.querySelector('main').appendChild(newBlock); //позволяет получить первый  найденный элемент 
+        }  // appendChild позволяет вставить в конец какого-либо другой элемент
 
         function addNewBlocks() {            
             let numBlocks = parseInt(document.getElementById('blockCountInput').value, 10); // пользовательский ввод
@@ -48,7 +48,23 @@
 
                 main.appendChild(newBlock);
             }
+        } 
+
+        function add20_50() {
+            let main = document.querySelector('main');
+            for(let i=20; i<=50; i+=2.5) {
+                let newBlock = document.createElement('div');
+                newBlock.style.width = '70px';
+                newBlock.style.border = '1px solid';
+                newBlock.style.backgroundColor = 'bisque';
+                newBlock.style.margin = '3px';
+
+                newBlock.innerHTML = `${i}`;
+
+                main.appendChild(newBlock); // позволяет получить HTML-содержимое элемента в виде строки, а также менять содержимое на странице
+            }
         }
+
     </script>
 </head>
 <body>
@@ -61,6 +77,7 @@
         <br>
         <button onclick="addNewBlock()">Добавить блок</button>
         <button onclick="addNewBlocks()">Добавить блоки</button>
+        <button onclick="add20_50()">20=>50</button>
     </main>
 
     <footer>

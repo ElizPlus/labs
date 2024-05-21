@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Лабораторная 7</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-48x48.ico">
+        <script>
+            function addNewBlock() {
+                let newBlock = document.createElement('div');
+                newBlock.style.backgroundColor = 'green';
+                newBlock.style.height = '40px';
+                newBlock.style.border = '3px solid black';
+                newBlock.style.margin = '5px';
+                newBlock.style.width = '550px';
+
+                document.querySelector('main').appendChild(newBlock);
+            }
+
+            function addNewBlocks() {
+                // Получаем значение из текстового поля
+                let numberOfBlocks = parseInt(document.getElementById('blockCountInput').value, 10);
+                if (isNaN(numberOfBlocks) || numberOfBlocks <= 0) {
+                    alert('Введите корректное количество блоков.');
+                    return;
+                }
+
+                let main = document.querySelector('main');
+                // Очищаем текущие блоки
+                main.innerHTML = '';
+
+                for (let i = 0; i < numberOfBlocks; i++) {
+                    let newBlock = document.createElement('div');
+                    newBlock.style.backgroundColor = 'green';
+                    newBlock.style.height = '40px';
+                    newBlock.style.border = '3px solid black';
+                    newBlock.style.margin = '5px';
+                    newBlock.style.width = `${150 + 50 * i}px`;
+                    newBlock.innerHTML = `Блок № ${i + 1}: 2 * ${i}<sup>2</sup> = ${2 * i**2}`;
+
+                    main.appendChild(newBlock);
+                }
+            }
+            function add20_50() {
+                let main = document.querySelector('main');
+                for(let i = 20; i<=50; i+=2.5) {
+                    let newBlock = document.createElement('div');
+                    newBlock.style.width = '40px';
+                    newBlock.style.border = '1px solid';
+                    newBlock.style.backgroundColor = 'white';
+                    newBlock.style.margin = '3px';
+
+                    newBlock.innerHTML = `${i}`;
+
+                    main.appendChild(newBlock);
+                }
+            }
+            
+        </script>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 7
+            <hr>
+        </header>
+
+        <main>
+            <input type="number" id="blockCountInput" min="1" placeholder="Введите количество блоков" style="margin-bottom: 10px; width: 190px;">
+            <br>
+            <button onclick="addNewBlock()">Добавить блок</button>
+            <button onclick="addNewBlocks()">Добавить блоки</button>
+            <button onclick="add20_50()">20 => 50</button>
+           
+        </main>
+
+        <footer>
+            <hr>
+            &copy; Видергольд Ирина, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
