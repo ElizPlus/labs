@@ -8,11 +8,7 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon-16x16.png">
     <link rel="icon" href="../favicon-32x32.png">
-    <style>
-        .addNewBlock {
 
-        }
-    </style>
     <script>
         function addNewBlock() { //обработчик нажатия
             let newBlock = document.createElement('div'); // создаёт новый элемент, в параметре имя тега
@@ -111,7 +107,7 @@
         function createCircles() {
             let circleCount = document.getElementById('circleCount').value;
             let main = document.getElementById('circlesContainer');
-            main.innerHTML = ''; // Clear previous circles
+            main.innerHTML = ''; 
 
             for (let i = circleCount; i >0; i--) {
                 let newCircle = document.createElement('div');

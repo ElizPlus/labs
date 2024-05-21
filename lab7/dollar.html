@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс доллара</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    
+    <script>
+        function showExchange() {
+            const exchange = [
+                60.2847, 60.0490, 60.2285, 60.8018, 60.7355, 60.9090,
+                61.2868, 61.7208, 61.1333, 60.9802
+            ];
+            let table = document.getElementById('dollar-table'); // нашли таблицу по id
+            for(let i = 0; i < exchange.length; i++) {  // сравниваем переменную-счётчик с длиной массива exchange.length
+                let tr = document.createElement('tr'); // внутри цикла создаём строчку для таблицы и ячейки
+                let td = document.createElement('td');
+                td.innerText = exchange[i]; // заполнили ячейку курсом доллара
+                tr.appendChild(td); // ячейку вставили в строчку
+                table.appendChild(tr); // строчку - в таблицу
+            }  
+
+            let sum = 0;
+            for(let i =0; i < exchange.length; i++) {
+                sum +=exchange[i];
+            }
+
+            let average = sum / exchange.length;
+            average = average.toFixed(2);
+
+            let detail = document.getElementById('detail');
+            detail.innerText = `Средний курс: ${average}`;
+
+            let button = document.querySelector('button');
+            if (button) {
+                button.remove();
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button onclick="showExchange()">Курс доллара</button>
+        <table border="1" id="dollar-table"></table>
+        <div id="detail"></div>
+    </main>
+
+    <footer>
+        &copy; Плюснина Елизавета, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
