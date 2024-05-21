@@ -97,10 +97,41 @@
                 newBlock.style.width = '50px';
                 newBlock.style.height = '50px';
                 newBlock.style.backgroundColor = 'blue';
+                newBlock.style.display = 'inline-block';
                 newBlock.style.opacity = (i /10); //устанавливается в зависимости от индекса блока для плавного перехода
 
+                let counter = document.createElement('div');
+                counter.textContent = i +1;
+                newBlock.appendChild(counter);
 
                 main.appendChild(newBlock);
+            }
+        }
+
+        function createCircles() {
+            let circleCount = document.getElementById('circleCount').value;
+            let main = document.getElementById('circlesContainer');
+            main.innerHTML = ''; // Clear previous circles
+
+            for (let i = circleCount; i >0; i--) {
+                let newCircle = document.createElement('div');
+                newCircle.className = 'circle';
+                newCircle.style.width = '50px';
+                newCircle.style.height = '50px';
+                newCircle.style.borderRadius = '50%';
+                newCircle.style.display = 'inline-block';
+
+                if (i %2 ===0) {
+                    newCircle.style.backgroundColor = 'green';
+                } else {
+                    newCircle.style.backgroundColor = 'red';
+                }
+
+                let counter = document.createElement('div');
+                counter.textContent = i;
+                newCircle.appendChild(counter);
+
+                main.appendChild(newCircle);
             }
         }
 
@@ -111,7 +142,7 @@
         НГТУ, ФБ, Лабораторная работа 7
     </header>
 
-    <main >
+    <main id="circlesContainer">
         <input type="number" id="blockCountInput" min="1" placeholder="Введите количество блоков" style="margin-bottom: 10px;">
         <br>
         <button onclick="addNewBlock()">Добавить блок</button>
@@ -119,6 +150,10 @@
         <button onclick="add20_50()">20=>50</button>
         <button onclick="add10_80()">10=> -80</button>
         <button onclick="opacity()">Полупрозрачные блоки</button>
+        <br>
+        <input type="number" id="circleCount" min="1" placeholder="Введите количество кругов" style="margin-bottom: 10px;">
+        <br>
+        <button onclick="createCircles()">Цветные круги</button>
     </main>
 
     <footer>
