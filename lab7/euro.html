@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс евро</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+
+    <script>
+        function getEuroExchangeRate() {
+            const url = 'https://www.cbr-xml-daily.ru/daily_json.js';
+            fetch(url)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(json) {
+                    const euro = json.Valute.EUR;
+                    const currentRate = euro.Value;
+                    const previousRate = euro.Previous;
+                    const date = json.Date;
+
+                    const difference = currentRate - previousRate;
+                    const differenceText = difference > 0 ? 'поднялся' : 'опустился';
+
+                    const details = `
+                        <div style="border: 5px solid; padding: 30px; margin-top: 10px; background-color: azure;">
+                            <h2>Текущий курс евро</h2>
+                            <p><strong>Дата запроса:</strong> ${new Date(date).toLocaleDateString()}</p>
+                            <p><strong>Текущий курс:</strong> ${currentRate.toFixed(2)} RUB</p>
+                            <p><strong>Курс за предыдущий день:</strong> ${previousRate.toFixed(2)} RUB</p>
+                            <p><strong>Разница:</strong> ${difference.toFixed(2)} RUB, курс ${differenceText}</p>
+                        </div>
+                    `;
+
+                    document.getElementById('euro-details').innerHTML = details;
+                });
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button onclick="getEuroExchangeRate()">Курс евро</button>
+        <div id="euro-details"></div>
+        <a href="https://www.cbr-xml-daily.ru/">Курсы валют, API</a>
+    </main>
+
+    <footer>
+        &copy; Плюснина Елизавета, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
