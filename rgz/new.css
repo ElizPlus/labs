@@ -1,0 +1,72 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial;
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    background-color: rgb(111, 208, 111);
+    color: black;
+    font-family: Arial;
+    padding: 10px;
+}  
+
+footer {
+    background-color: rgb(181, 181, 181);
+    color: black;
+    font-family: Arial;
+    padding: 10px;
+    font-size: 16px;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+} 
+
+main {
+    background-color: white;
+    color: black;
+    font-family: Arial;
+    text-indent: 25px; /* Отступ первой строки в пикселах*/
+    margin: 10px 20px 56px;
+} 
+
+a {
+    color: green;
+    text-decoration: none;
+    transition: 1s 2s;
+}
+
+a:link {
+    color: brown;
+}
+
+a:visited {
+    color:rgb(119, 18, 18);
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    text-shadow: 6px 4px 3px rgba(1, 7, 12, 0.685);
+    transition: 0.3s;
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
+}
+
+div.menu {
+    border: 6px solid #b84624;
+    border-radius: 7px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+div.menu:hover {
+    background-color: #f59477;
+    box-shadow: 0 0 30px #ffffff;
+}

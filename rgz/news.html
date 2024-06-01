@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        .header__menu--icon {
+            background-color: #c1c1c1;
+            position: absolute; /* Фиксированное позиционирование */
+            top: 0; /* Прижимаем к верху */
+            right: 0; /* Прижимаем к правому краю */
+            width: 200px; 
+            height: 300%; 
+            padding-top: 20px;
+        }    
+
+        .text_content {
+            /* Прижимаем к правому краю */
+            width: 87%; 
+            padding-top: 20px;
+        }
+        .card {
+            width: 400px;
+            height: 250px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px gray;
+            background-color: rgb(161, 212, 124);
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+    </style>
+    <script>
+        function showFullNews() {
+            let screens = document.getElementsByClassName('card');
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, РГЗ
+    </header>
+
+    <main>
+        <div class="header__menu--icon">
+            <ul>
+                <li><a href="company.html">О компании</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="currency.html">Курс валют</a></li>
+                <li><a href="contact.html">Контактные данные</a></li>
+                <li><a href="video.html">Видео</a></li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <div class="header__flex flex-block">
+                <div class="header__logo flex-block">
+                    <a href="https://bnpparibasbank.ru">
+                        <img src="https://bnpparibasbank.ru/wp-content/themes/bnpp/images/logo-default.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="news-container">
+            <div class="card">
+                <span class="date">5.05.2024</span>
+                <h3>Экс-глава Почта Банка стал совладельцем страховой компании «Кардиф»</h3>
+                <p>Бывший председатель правления Почта Банка Дмитрий Руденко стал совладельцем страховой компании (СК) «Кардиф», следует из Единого государственного реестра юридических лиц (ЕГРЮЛ).</p>
+                <button onclick="showFullNews()">Показать</button>
+            </div>
+
+            <div class="card" style="display: none;">
+                Руденко приобрел долю страховщика вместе с группой инвесторов у французской BNP Paribas Cardif, принадлежащей французской банковской группе BNP Paribas. Теперь он владеет 40% СК «Кардиф». Соответствующие изменения внесли в реестр 4 апреля.
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">27.12.2023</span>
+                <h3>Крупнейший банк Франции стал фигурантом дела об отмывании средств россиян</h3>
+                <p>Расследование ведется в отношении BNP Paribas Securities Services — филиала крупнейшего банка Франции — и кипрского брокера TCR International Limited. .</p>
+                <button onclick="showFullNews()">Показать</button>
+            </div>    
+            <div class="card" style="display: none;">    
+                Во Франции в июне началось предварительное расследование в отношении BNP Paribas Securities Services — филиала банка BNP Paribas — и брокерской компании TCR International Limited, зарегистрированной на Кипре, пишет газета Le Monde со ссылкой на прокуратуру Парижа. Следствие подозревает, что французский банк был замешан в «отмывании денег при отягчающих обстоятельствах».
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">12.04.2024</span>
+                <h3>Выигравшему €4,5 млн банкиру не разрешили их оставить себе</h3>
+                <p>Банкир отсудил у бывшего работодателя компенсацию за несправедливое увольнение сначала в суде в Лондоне, затем значительно большую сумму в парижском суде. </p>
+                <button onclick="showFullNews()">Показать</button>
+            </div>
+            <div class="card" style="display: none;">    
+                Верховный суд Франции после консультаций с судьями Евросоюза сообщил, что банкир BNP Paribas Бертран Лавин, отсудивший €4,5 млн ($4,9 млн) по делу о несправедливом увольнении, не сможет оставить деньги себе, передает Bloomberg.
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">5.05.2024</span>
+                <h3>В Париже прошли обыски в HSBC и Societe Generale по делу об отмывании</h3>
+                <p>Обыски прошли в офисах четырех банков: Societe Generale, BNP Paribas, HSBC, BPCE. Следствие полагает, что акционеры уклонялись от налогов в период выплаты дивидендов</p>
+                <button onclick="showFullNews()">Показать</button>
+            </div>
+            <div class="card" style="display: none;">
+                Следователи пришли с обысками в офисы банков Societe Generale, BNP Paribas и его инвестиционной «дочки» Exane, HSBC, BPCE и его инвестиционного подразделения Natixis в рамках французско-немецкого расследования об уклонении от налогов, пишет Handelsblatt.
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">5.05.2024</span>
+                <h3>Экс-глава Почта Банка стал совладельцем страховой компании «Кардиф»</h3>
+                <p>Бывший председатель правления Почта Банка Дмитрий Руденко стал совладельцем страховой компании (СК) «Кардиф», следует из Единого государственного реестра юридических лиц (ЕГРЮЛ).</p>
+                <button onclick="showFullNews()">Показать</button>
+            </div>
+            <div class="card" style="display: none;">  
+                Руденко приобрел долю страховщика вместе с группой инвесторов у французской BNP Paribas Cardif, принадлежащей французской банковской группе BNP Paribas. Теперь он владеет 40% СК «Кардиф». Соответствующие изменения внесли в реестр 4 апреля.
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">5.05.2024</span>
+                <h3>Экс-глава Почта Банка стал совладельцем страховой компании «Кардиф»</h3>
+                <p>Бывший председатель правления Почта Банка Дмитрий Руденко стал совладельцем страховой компании (СК) «Кардиф», следует из Единого государственного реестра юридических лиц (ЕГРЮЛ).</p>
+                <button onclick="showFullNews()">Показать</button>
+            </div>
+            <div class="card" style="display: none;">
+                Руденко приобрел долю страховщика вместе с группой инвесторов у французской BNP Paribas Cardif, принадлежащей французской банковской группе BNP Paribas. Теперь он владеет 40% СК «Кардиф». Соответствующие изменения внесли в реестр 4 апреля.
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">5.05.2024</span>
+                <h3>Экс-глава Почта Банка стал совладельцем страховой компании «Кардиф»</h3>
+                <p>Бывший председатель правления Почта Банка Дмитрий Руденко стал совладельцем страховой компании (СК) «Кардиф», следует из Единого государственного реестра юридических лиц (ЕГРЮЛ).</p>
+                <button onclick="showFullNews()">Показать</button>
+                <p>Руденко приобрел долю страховщика вместе с группой инвесторов у французской BNP Paribas Cardif, принадлежащей французской банковской группе BNP Paribas. Теперь он владеет 40% СК «Кардиф». Соответствующие изменения внесли в реестр 4 апреля.</p>
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">5.05.2024</span>
+                <h3>Экс-глава Почта Банка стал совладельцем страховой компании «Кардиф»</h3>
+                <p>Бывший председатель правления Почта Банка Дмитрий Руденко стал совладельцем страховой компании (СК) «Кардиф», следует из Единого государственного реестра юридических лиц (ЕГРЮЛ).</p>
+                <button onclick="showFullNews()">Показать</button>
+                <p>Руденко приобрел долю страховщика вместе с группой инвесторов у французской BNP Paribas Cardif, принадлежащей французской банковской группе BNP Paribas. Теперь он владеет 40% СК «Кардиф». Соответствующие изменения внесли в реестр 4 апреля.</p>
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">5.05.2024</span>
+                <h3>Экс-глава Почта Банка стал совладельцем страховой компании «Кардиф»</h3>
+                <p>Бывший председатель правления Почта Банка Дмитрий Руденко стал совладельцем страховой компании (СК) «Кардиф», следует из Единого государственного реестра юридических лиц (ЕГРЮЛ).</p>
+                <button onclick="showFullNews()">Показать</button>
+                <p>Руденко приобрел долю страховщика вместе с группой инвесторов у французской BNP Paribas Cardif, принадлежащей французской банковской группе BNP Paribas. Теперь он владеет 40% СК «Кардиф». Соответствующие изменения внесли в реестр 4 апреля.</p>
+            </div>
+        </div>
+
+        <div class="news-container">
+            <div class="card">
+                <span class="date">5.05.2024</span>
+                <h3>Экс-глава Почта Банка стал совладельцем страховой компании «Кардиф»</h3>
+                <p>Бывший председатель правления Почта Банка Дмитрий Руденко стал совладельцем страховой компании (СК) «Кардиф», следует из Единого государственного реестра юридических лиц (ЕГРЮЛ).</p>
+                <button onclick="showFullNews()">Показать</button>
+                <p>Руденко приобрел долю страховщика вместе с группой инвесторов у французской BNP Paribas Cardif, принадлежащей французской банковской группе BNP Paribas. Теперь он владеет 40% СК «Кардиф». Соответствующие изменения внесли в реестр 4 апреля.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Плюснина Елизавета, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
