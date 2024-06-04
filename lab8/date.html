@@ -19,7 +19,16 @@
         <div id="current-date"></div>
         <div id="locale-dates"></div><br>
         <div id="additional-info"></div>
-       
+        <div>
+            <label for="input-day">День:</label>
+            <input type="number" id="input-day" min="1" max="31">
+            <label for="input-month">Месяц:</label>
+            <input type="number" id="input-month" min="1" max="12">
+            <label for="input-year">Год:</label>
+            <input type="number" id="input-year" min="1">
+            <button onclick="showDayOfWeek()">День недели</button>
+            <div id="day-of-week-result"></div>
+        </div>
     </main>
 
     <footer>
