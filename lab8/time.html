@@ -6,22 +6,28 @@
     <title>Лабораторная работа 8</title>
     <link rel="stylesheet" href="../main.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-16x16.png"> 
     <link rel="icon" href="../favicon-32x32.png">
+    <script src="time.js"></script>
 
-    <script>
-
-    </script>
+    <style>
+        #seconds {
+            font-size: 50px;
+            color: #a62525;
+            text-align: center;
+            padding: 5px;
+        }
+        
+    </style>
 </head>
-<body>
-    <header>
-        НГТУ, ФБ, Лабораторная работа 7
+<body onload="showDate()">
+    <header >  
+        НГТУ, ФБ, Лабораторная работа 8
+        <div id="time">00:00:00</div>
     </header>
 
-    <main>
-        <li><a href="date.html">Дата</a></li>
-        <li><a href="get-days-count.html">Число дней с даты рождения</a></li>
-        <li><a href="time.html">Время</a></li>
+    <main>  
+        <div id="seconds">00</div>
     </main>
 
     <footer>
