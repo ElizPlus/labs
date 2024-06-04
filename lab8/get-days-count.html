@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 8</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png"> 
+    <link rel="icon" href="../favicon-32x32.png">
+    <script src="get-days-count.js"></script>
+</head>
+<body>
+    <header >  
+        НГТУ, ФБ, Лабораторная работа 8
+    </header>
+
+    <main>  
+        <div class="date-form">
+            <label for="input-date">Дата рождения: </label>
+            <input type="date" id="input-date">
+            <button onclick="showDaysCount()">Показать число дней</button>
+            <button class="clear" onclick="clearFields()">Очистить</button>
+        </div>
+        <div id="days-count-result"></div> 
+    </main>
+
+    <footer>
+        &copy; Плюснина Елизавета, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
