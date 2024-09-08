@@ -16,6 +16,11 @@ let totalDegrees = 0;
         
         document.getElementById('time').textContent = timeString;
         document.getElementById('seconds').textContent = seconds;
+
+        const secondHand = document.getElementById('second-hand');
+        totalDegrees += 6; 
+        secondHand.style.transform = `rotate(${totalDegrees}deg)`;
     }
+    
 
 setInterval(showTime, 1000);
